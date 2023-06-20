@@ -1,5 +1,5 @@
 import os
-from constants import openai_key
+#from constants import openai_key
 
 from langchain.document_loaders import DirectoryLoader, TextLoader
 from langchain.text_splitter import CharacterTextSplitter
