@@ -1,5 +1,5 @@
 import os
-#from constants import openai_key
+
 
 from langchain.document_loaders import DirectoryLoader, TextLoader
 from langchain.text_splitter import CharacterTextSplitter
@@ -10,48 +10,77 @@ from langchain import OpenAI
 import streamlit as st
 from langchain.llms import OpenAI
 from io import BytesIO
+import base64
+from PIL import Image
 
 
 # Set page title and background image
-st.set_page_config(page_title="DocuBot", page_icon=":robot:", layout="wide")
-st.markdown(
-    """
+st.set_page_config(page_title="DocuBot", page_icon="bot1.jpeg", layout="centered")
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
     <style>
-     .title {
-        color: red;  /* Change color of page title */
-    }
-    .reportview-container {
-        background: url("./docs/q&a1.png");
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
     </style>
     """,
     unsafe_allow_html=True
-)
+    )
+add_bg_from_local('bg5.jpeg') 
 
 # Add image on the right corner
 sidebar_image = "./docs/q&a.png"
 st.sidebar.image(sidebar_image, use_column_width=True)
 
 # Add text below the image
-st.sidebar.write("Contact us:")
+st.sidebar.header("Author : Naveen ")
 st.sidebar.write("Email: naveenkrishiv@gmail.com")
 
 # Main content
-st.title("DocuBot")
+#st.markdown("<h1 style='text-align: center; color: white;'>DocuBot</h1>", unsafe_allow_html=True)
+#image_path = "docs/q&a1.png"
+#image = Image.open(image_path)
+#resized_image = image.resize((50, 200))
+#st.image(resized_image, caption="DocuBot", use_column_width=True)
+
+# Define the CSS style for the bot icon
+css = """
+.bot-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+"""
+
+# Add the custom CSS style
+st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+
+
+import streamlit as st
+
+# Add the Font Awesome CSS
+st.markdown('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">', unsafe_allow_html=True)
+
+# Render the icon and title
+st.markdown("<h1 style='text-align: center; color: white;'> DocuBot </h1>", unsafe_allow_html=True)
+
+#st.title("DocuBot")<i class="fa-regular fa-robot" style="color: #0c0c0d;"></i>
 
 # Add your existing code here
 #uploaded_file = st.file_uploader("Upload The File for Model Analysis")
 
 os.environ["OPENAI_API_KEY"]=st.secrets["openai_key"]
-
 embeddings = OpenAIEmbeddings()
 
 # Use TextLoader for a single text file or DirectoryLoader for a directory of text files
 
-st.header(" Upload The File for Model Analysis ")
+st.markdown("<h5 style='text-align: center; color: yellow;'>Upload File for Model Analysis</h5>", unsafe_allow_html=True)
+
+#st.text(" Upload File for Model Analysis ")
 uploaded_file = st.file_uploader("")
 
 if uploaded_file:
@@ -91,14 +120,8 @@ if uploaded_file:
 
 
     def query(q):
-        #st.write("Query: ", q)
+       
         st.write("Query Response : ", qa.run(q))
         
     if input_text:
         st.write(query(input_text))
-
-
-    
-    
-    
-#query(" What is the DOB of Naveen?")
