@@ -45,7 +45,7 @@ st.title("DocuBot")
 # Add your existing code here
 #uploaded_file = st.file_uploader("Upload The File for Model Analysis")
 
-os.environ["OPENAI_API_KEY"]=openai_key
+os.environ["OPENAI_API_KEY"]=st.secrets["openai_key"]
 
 embeddings = OpenAIEmbeddings()
 
