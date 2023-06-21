@@ -121,7 +121,7 @@ if uploaded_file:
 
     def query(q):
        
-        st.write("Query Response : ", qa.run(q))
-        
+       st.markdown("<h6 style='text-align: center; color: green;'> st.write("Query Response : ", qa.run(q)) </h6>", unsafe_allow_html=True)
+         
     if input_text:
         st.write(query(input_text))
