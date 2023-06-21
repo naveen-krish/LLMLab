@@ -120,8 +120,7 @@ if uploaded_file:
 
 
     def query(q):
-       
-    st.write("Query Response : ", qa.run(q)) 
+        st.write("Query Response : ", qa.run(q)) 
          
     if input_text:
         st.write(query(input_text))
