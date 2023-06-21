@@ -51,7 +51,7 @@ import streamlit as st
 st.markdown('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">', unsafe_allow_html=True)
 
 # Render the icon and title
-st.markdown("<h1 style='text-align: center; color: white;'> DocuBot </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'> DocuBot </h1>", unsafe_allow_html=True)
 
 #st.title("DocuBot")<i class="fa-regular fa-robot" style="color: #0c0c0d;"></i>
 
@@ -63,7 +63,7 @@ embeddings = OpenAIEmbeddings()
 
 # Use TextLoader for a single text file or DirectoryLoader for a directory of text files
 
-st.markdown("<h5 style='text-align: center; color: yellow;'>Upload File for Model Analysis</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: blue;'>Upload File for Model Analysis</h5>", unsafe_allow_html=True)
 
 #st.text(" Upload File for Model Analysis ")
 uploaded_file = st.file_uploader("")
