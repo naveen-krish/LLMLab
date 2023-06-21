@@ -30,7 +30,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('bg5.jpeg') 
+add_bg_from_local('bg6.jpg') 
 
 # Add image on the right corner
 sidebar_image = "./docs/q&a.png"
@@ -41,7 +41,7 @@ st.sidebar.header("Author : Naveen ")
 st.sidebar.write("Email: naveenkrishiv@gmail.com")
 
 # Main content
-#st.markdown("<h1 style='text-align: center; color: white;'>DocuBot</h1>", unsafe_allow_html=True)
+#st.markdown("<h1 style='text-align: center; color: black;'>DocuBot</h1>", unsafe_allow_html=True)
 #image_path = "docs/q&a1.png"
 #image = Image.open(image_path)
 #resized_image = image.resize((50, 200))
@@ -121,7 +121,7 @@ if uploaded_file:
 
     def query(q):
        
-       st.markdown("<h6 style='text-align: center; color: green;'> st.write("Query Response : ", qa.run(q)) </h6>", unsafe_allow_html=True)
+    st.write("Query Response : ", qa.run(q)) 
          
     if input_text:
         st.write(query(input_text))
