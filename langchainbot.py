@@ -122,7 +122,7 @@ if uploaded_file:
 
 
     def query(q):
-        st.write('<p style="color:white;">Query Response : </p>',qa.run(q)) 
+        st.write('<p style="color:white;">Query Response : </p>',qa.run(q),unsafe_allow_html=True) 
          
     if input_text:
         st.write(query(input_text))
