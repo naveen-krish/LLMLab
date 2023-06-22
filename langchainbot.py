@@ -65,7 +65,7 @@ embeddings = OpenAIEmbeddings()
 
 # Use TextLoader for a single text file or DirectoryLoader for a directory of text files
 
-st.write("<h5 style='text-align: center; color: coral;'>File Up and Let's Query :chipmunk:</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: coral;'>File Up and Let's Query </h5>", unsafe_allow_html=True)
 
 #st.text(" Upload File for Model Analysis ")
 uploaded_file = st.file_uploader("")
@@ -90,7 +90,7 @@ if uploaded_file:
  
  
     print(len(documents))
-    input_text=st.text_input('<p style="color:blue;" Type your Query </p>')
+    input_text=st.text_input(" Type your Query 👇")
 
     text_splitter = CharacterTextSplitter(chunk_size=800, chunk_overlap=0)
     texts = text_splitter.split_documents(documents)
