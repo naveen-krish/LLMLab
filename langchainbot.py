@@ -32,7 +32,7 @@ def add_bg_from_local(image_file):
 add_bg_from_local('bg5.jpeg')
 
 # Set page title and background image
-st.set_page_config(page_title="DocuBot", page_icon="bot1.jpeg", layout="centered")
+#st.set_page_config(page_title="DocuBot", page_icon="bot1.jpeg", layout="centered")
 
 # Add image on the right corner
 sidebar_image = "./docs/q&a.png"
