@@ -63,7 +63,7 @@ embeddings = OpenAIEmbeddings()
 
 # Use TextLoader for a single text file or DirectoryLoader for a directory of text files
 
-st.markdown("<h5 style='text-align: center; color: coral;'>Upload File for Model Analysis</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; color: coral;'>File Up and Let's Query :chipmunk:</h5>", unsafe_allow_html=True)
 
 #st.text(" Upload File for Model Analysis ")
 uploaded_file = st.file_uploader("")
