@@ -1,14 +1,19 @@
-openai
-langchain
 streamlit
 
+typing-inspect==0.8.0
+typing_extensions==4.5.0
+openai==0.27.8
+langchain==0.0.230
+chroma==0.2.0
+chromadb==0.3.27
+pydantic==1.10.8
+
 unstructured
-chromadb
-Chroma
+
 tiktoken
 PyPDF2
 python-dotenv
 faiss-cpu
 altair<5
 pypdf
-pydantic==1.10.8
+
