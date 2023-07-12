@@ -97,13 +97,13 @@ if uploaded_file:
     input_text=st.text_input("Type your Query ")
 
     
-    text_splitter = CharacterTextSplitter(
-        separator="\n",
-        chunk_size=1000,
-        chunk_overlap=200,
-        length_function=len
-      )
-    llm=OpenAI()
+    #text_splitter = CharacterTextSplitter(
+   #     separator="\n",
+   #     chunk_size=1000,
+  #      chunk_overlap=200,
+ #       length_function=len
+ #     )
+ #   llm=OpenAI()
     
     
     docsearch = Chroma.from_documents(pages, embeddings)
