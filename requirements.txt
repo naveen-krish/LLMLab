@@ -3,8 +3,8 @@ langchain
 streamlit
 
 unstructured==0.5.9
-chromadb==0.3.21
-Chroma==0.2.0
+chromadb
+Chroma
 tiktoken
 PyPDF2==3.0.1
 python-dotenv==1.0.0
