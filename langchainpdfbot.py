@@ -68,7 +68,9 @@ st.markdown("<h1 style='text-align: center; color: white;'> DocuBot </h1>", unsa
 
 os.environ["OPENAI_API_KEY"]=st.secrets["openai_key"]
 
-embeddings = OpenAIEmbeddings()
+embeddings = OpenAIEmbeddings(chunk_size=1)
+
+#embeddings = OpenAIEmbeddings()
 
 # Use TextLoader for a single text file or DirectoryLoader for a directory of text files
 
