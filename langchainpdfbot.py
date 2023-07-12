@@ -68,7 +68,7 @@ st.markdown("<h1 style='text-align: center; color: white;'> DocuBot </h1>", unsa
 
 os.environ["OPENAI_API_KEY"]=st.secrets["openai_key"]
 
-embeddings = OpenAIEmbeddings(chunk_size=1)
+embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["openai_key"])
 
 #embeddings = OpenAIEmbeddings()
 
