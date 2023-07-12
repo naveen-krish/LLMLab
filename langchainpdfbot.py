@@ -1,7 +1,7 @@
 import os
 #from constants import openai_key
 
-from langchain.document_loaders import DirectoryLoader
+
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
