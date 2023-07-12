@@ -11,3 +11,4 @@ python-dotenv
 faiss-cpu
 altair<5
 pypdf
+pydantic==1.10.8
