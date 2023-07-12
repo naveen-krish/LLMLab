@@ -66,7 +66,7 @@ st.markdown("<h1 style='text-align: center; color: white;'> DocuBot </h1>", unsa
 
 
 
-os.environ["OPENAI_API_KEY"]=“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”
+os.environ["OPENAI_API_KEY"] = “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”
 
 #st.secrets["openai_key"]
 
