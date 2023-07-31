@@ -1,3 +1,5 @@
+__import__('pysqlite3')
+
 import os
 #from constants import openai_key
 
@@ -14,6 +16,8 @@ from io import BytesIO
 import base64
 from PIL import Image
 from langchain.document_loaders import PyPDFLoader 
+import sqlite3
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 
 # Set page title and background image
