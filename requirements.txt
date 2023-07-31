@@ -11,3 +11,4 @@ python-dotenv
 faiss-cpu
 altair<5
 pypdf
+pysqlite3-binary
