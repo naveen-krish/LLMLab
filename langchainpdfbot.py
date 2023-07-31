@@ -1,5 +1,5 @@
 __import__('pysqlite3')
-
+import sys
 import os
 #from constants import openai_key
 
