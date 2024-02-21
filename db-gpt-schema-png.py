@@ -11,9 +11,10 @@ from langchain_community.chat_models import ChatOpenAI
 from langchain.sql_database import SQLDatabase
 from langchain.prompts.chat import ChatPromptTemplate
 import os
+import sys
 
 # Assuming 'constants' is a module where 'openai_key' is defined.
-from constants import openai_key
+#from constants import openai_key
 
 # Function to parse the schema file
 def parse_schema_file(schema_file):
@@ -78,7 +79,8 @@ if st.button("Get Response") and prompt_template:
     connection_string = "mysql+pymysql://root:secret@localhost:3306/genai"
     db_engine = create_engine(connection_string)
     db = SQLDatabase(db_engine)
-    os.environ["OPENAI_API_KEY"] = openai_key
+    os.environ["OPENAI_API_KEY"]=st.secrets["openai_key"]
+    #os.environ["OPENAI_API_KEY"] = openai_key
 
     # Initialize LLM and SQL toolkit
     llm = ChatOpenAI(temperature=0.0, model="gpt-4")
